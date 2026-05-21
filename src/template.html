@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="{{LANG}}">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{TITLE}}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800&display=swap"
+    />
+    <link rel="stylesheet" href="../src/styles/cv.css" />
+  </head>
+  <body>
+    <article class="page" data-screen-label="01 CV" style="background: rgb(34, 34, 34); color: rgb(244, 241, 234)">
+      <!-- ─────── HERO ─────── -->
+      <section class="hero" style="background: rgb(34, 34, 34)">
+        <div class="avatar" style="background: rgb(241, 196, 15)">
+          <img src="../src/avatar.png" alt="Aurélien Leloup" />
+        </div>
+        <div class="hero-title">
+          <p class="eyebrow" style="color: rgb(241, 196, 15); font-weight: 500; font-size: 9px">
+            {{EYEBROW}}
+          </p>
+          <h1 class="name" style="color: rgb(244, 241, 234); font-family: Poppins; font-weight: 800; font-size: 32px">
+            <span style="color: rgb(244, 241, 234); font-family: Poppins; font-weight: 800; font-size: 32px">AURÉLIEN </span><span class="accent" style="color: rgb(241, 196, 15); font-weight: 800; font-style: italic">LELOUP</span>
+          </h1>
+          <p class="role" style="color: rgb(184, 179, 168); font-weight: 400; font-size: 11px">
+            <strong style="color: rgb(244, 241, 234); font-weight: 600">{{ROLE_STRONG}}</strong><span style="color: rgb(184, 179, 168); font-weight: 400; font-size: 11px"> {{ROLE_SPAN}}</span>
+          </p>
+          <p class="summary" style="color: rgb(184, 179, 168); font-weight: 300; font-size: 10px">
+            <b style="color: rgb(244, 241, 234); font-weight: 500">{{SUMMARY_BOLD1}}</b><span style="color: rgb(184, 179, 168); font-weight: 300; font-size: 10px"> {{SUMMARY_TEXT}}</span><b style="color: rgb(244, 241, 234); font-weight: 500">{{SUMMARY_BOLD2}}</b>
+          </p>
+        </div>
+        <div class="stats">
+          <div>
+            <div class="stat-num" style="color: rgb(241, 196, 15); font-weight: 800; font-size: 29px">10+</div>
+            <div class="stat-lbl" style="color: rgb(184, 179, 168); font-size: 8px">{{STAT_LBL}}</div>
+          </div>
+        </div>
+      </section>
+      <!-- ─────── SIDEBAR ─────── -->
+      <aside class="sidebar" style="background: rgb(28, 28, 28)">
+        <div>
+          <div class="block-title" style="color: rgb(244, 241, 234); font-weight: 700; font-size: 9px">{{S_CONTACT}}</div>
+          <div class="contact-list" style="color: rgb(184, 179, 168); font-size: 10px">
+            <div class="row">
+              <span class="ico" style="background: rgba(241, 196, 15, 0.12); color: rgb(241, 196, 15); font-size: 10px">@</span><span style="color: rgb(184, 179, 168)">aurelien.leloup@hey.com</span>
+            </div>
+            <div class="row">
+              <span class="ico" style="background: rgba(241, 196, 15, 0.12); color: rgb(241, 196, 15); font-size: 10px">☏</span><span style="color: rgb(184, 179, 168)">+45 71 53 41 89</span>
+            </div>
+            <div class="row">
+              <span class="ico" style="background: rgba(241, 196, 15, 0.12); color: rgb(241, 196, 15); font-size: 10px">▸</span><span style="color: rgb(184, 179, 168)">aurelienleloup.fr</span>
+            </div>
+            <div class="row">
+              <span class="ico" style="background: rgba(241, 196, 15, 0.12); color: rgb(241, 196, 15); font-size: 10px">in</span><span style="color: rgb(184, 179, 168)">linkedin.com/in/aurelien-leloup</span>
+            </div>
+            <div class="row">
+              <span class="ico" style="background: rgba(241, 196, 15, 0.12); color: rgb(241, 196, 15); font-size: 10px">⌥</span><span style="color: rgb(184, 179, 168)">github.com/aurelien-leloup</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="block-title" style="color: rgb(244, 241, 234); font-weight: 700; font-size: 9px">{{S_SKILLS}}</div>
+          <div class="skill-group">
+            <div class="skill-label" style="color: rgb(241, 196, 15); font-weight: 600; font-size: 8px">Front-end</div>
+            <div class="skill-items" style="color: rgb(184, 179, 168); font-size: 9px">
+              <b style="color: rgb(244, 241, 234); font-weight: 500">Angular</b><span style="color: rgb(184, 179, 168); font-size: 9px"> · </span><b style="color: rgb(244, 241, 234); font-weight: 500">Vue</b><span style="color: rgb(184, 179, 168); font-size: 9px"> · </span><b style="color: rgb(244, 241, 234); font-weight: 500">Svelte</b><span style="color: rgb(184, 179, 168); font-size: 9px"> · TypeScript · Ionic · SASS · Tailwind · Storybook</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-label" style="color: rgb(241, 196, 15); font-weight: 600; font-size: 8px">Back-end</div>
+            <div class="skill-items" style="color: rgb(184, 179, 168); font-size: 9px">
+              <b style="color: rgb(244, 241, 234); font-weight: 500">Java</b><span style="color: rgb(184, 179, 168); font-size: 9px"> · </span><b style="color: rgb(244, 241, 234); font-weight: 500">Node.js</b><span style="color: rgb(184, 179, 168); font-size: 9px"> · Spring · Micronaut · Express · REST · OAuth/JWT</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-label" style="color: rgb(241, 196, 15); font-weight: 600; font-size: 8px">Cloud &amp; DevOps</div>
+            <div class="skill-items" style="color: rgb(184, 179, 168); font-size: 9px">
+              <b style="color: rgb(244, 241, 234); font-weight: 500">AWS</b><span style="color: rgb(184, 179, 168); font-size: 9px"> · GCP · Firebase · Docker · Kubernetes · CDK · CI/CD</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-label" style="color: rgb(241, 196, 15); font-weight: 600; font-size: 8px">Data</div>
+            <div class="skill-items" style="color: rgb(184, 179, 168); font-size: 9px">
+              PostgreSQL · MySQL · Oracle · MongoDB · Flyway
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="block-title" style="color: rgb(244, 241, 234); font-weight: 700; font-size: 9px">{{S_LANGUAGES}}</div>
+          {{LANGUAGES_LIST}}
+        </div>
+        <div>
+          <div class="block-title" style="color: rgb(244, 241, 234); font-weight: 700; font-size: 9px">{{S_CERTIFICATIONS}}</div>
+          {{CERTIFICATIONS_LIST}}
+        </div>
+        <div>
+          <div class="block-title" style="color: rgb(244, 241, 234); font-weight: 700; font-size: 9px">{{S_EDUCATION}}</div>
+          {{EDUCATION_LIST}}
+        </div>
+        <div>
+          <div class="block-title" style="color: rgb(244, 241, 234); font-weight: 700; font-size: 9px">{{S_INVOLVEMENT}}</div>
+          {{INVOLVEMENT_LIST}}
+        </div>
+      </aside>
+      <!-- ─────── MAIN ─────── -->
+      <main class="content" style="background: rgb(244, 241, 234); color: rgb(26, 26, 26)">
+        <div>
+          <div class="section-head">
+            <h2 style="color: rgb(26, 26, 26); font-weight: 700; font-size: 13px">
+              <span class="accent" style="color: rgb(241, 196, 15); font-weight: 800">⏵</span><span style="color: rgb(26, 26, 26); font-weight: 700; font-size: 13px">{{EXPERIENCE_TITLE}}</span>
+            </h2>
+            <span class="meta" style="color: rgb(138, 138, 138); font-size: 9px">{{EXPERIENCE_META}}</span>
+          </div>
+          <div class="timeline">
+            {{JOBS_LIST}}
+          </div>
+        </div>
+      </main>
+    </article>
+  </body>
+</html>

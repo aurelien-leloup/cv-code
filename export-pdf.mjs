@@ -23,8 +23,7 @@ await page.waitForTimeout(1000);
 await page.pdf({
   path: pdfPath,
   printBackground: true,
-  width: '210mm',
-  height: '297mm',
+  preferCSSPageSize: true,
   margin: { top: 0, right: 0, bottom: 0, left: 0 },
 });
 

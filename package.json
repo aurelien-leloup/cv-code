@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "export": "node export-pdf.mjs",
+    "postinstall": "playwright install chromium"
+  },
+  "devDependencies": {
+    "playwright": "^1.60.0"
+  }
+}

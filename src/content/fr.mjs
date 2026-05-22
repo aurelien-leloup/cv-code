@@ -8,7 +8,6 @@ export default {
   summaryBold1: '10 ans',
   summaryText: "de systèmes en production pour des startups, scale-ups et grands groupes — fintech, agritech, aviation, télécoms. Front-end, back-end, cloud. ",
   summaryBold2: 'Certifié AWS Solutions Architect.',
-  statLbl: "ans d'expérience",
 
   sContact: 'Contact',
   sSkills: 'Compétences',

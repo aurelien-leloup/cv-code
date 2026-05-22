@@ -39,7 +39,7 @@ body {
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
   display: grid;
   grid-template-columns: 70mm 1fr;
-  grid-template-rows: 50mm 1fr;
+  grid-template-rows: 44mm 1fr;
   overflow: hidden;
   position: relative;
 }
@@ -47,10 +47,10 @@ body {
 .hero {
   grid-column: 1 / -1;
   background: var(--card-bg);
-  padding: 4mm 14mm 4mm 14mm;
+  padding: 3mm 14mm 3mm 14mm;
   position: relative;
   display: grid;
-  grid-template-columns: 28mm 1fr auto;
+  grid-template-columns: 28mm 1fr;
   column-gap: 7mm;
   align-items: center;
   border-bottom: 1px solid var(--rule);
@@ -122,7 +122,7 @@ body {
   font-weight: 800;
 }
 .role {
-  margin-top: 2mm;
+  margin-top: 1.5mm;
   font-size: 8.5pt;
   font-weight: 400;
   letter-spacing: 0.04em;
@@ -133,42 +133,15 @@ body {
   font-weight: 600;
 }
 .summary {
-  margin: 2mm 0 0 0;
+  margin: 1.5mm 0 0 0;
   font-size: 7.25pt;
   line-height: 1.4;
   color: var(--text-dim);
   font-weight: 300;
-  max-width: 115mm;
 }
 .summary b {
   color: var(--text);
   font-weight: 500;
-}
-.stats {
-  display: flex;
-  flex-direction: column;
-  gap: 4mm;
-  align-items: flex-end;
-  text-align: right;
-  border-left: 1px solid var(--rule);
-  padding-left: 7mm;
-  align-self: stretch;
-  justify-content: center;
-}
-.stat-num {
-  font-size: 22pt;
-  font-weight: 800;
-  color: var(--accent);
-  line-height: 0.9;
-  letter-spacing: -0.04em;
-}
-.stat-lbl {
-  font-size: 6.25pt;
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  color: var(--text-dim);
-  margin-top: 1.5mm;
-  line-height: 1.4;
 }
 /* ────────────────── LEFT SIDEBAR ────────────────── */
 aside.sidebar {
@@ -341,7 +314,7 @@ main.content {
   --label-strong: #2a2620;
   background: #f4f1ea;
   color: var(--text);
-  padding: 6mm 14mm 5mm 11mm;
+  padding: 4mm 14mm 3mm 11mm;
   display: flex;
   flex-direction: column;
   gap: 2mm;
@@ -365,7 +338,7 @@ main.content > * {
   justify-content: space-between;
   border-bottom: 1px solid var(--rule);
   padding-bottom: 1.5mm;
-  margin-bottom: 2mm;
+  margin-bottom: 1.5mm;
 }
 .section-head h2 {
   font-size: 9.5pt;
@@ -389,7 +362,7 @@ main.content > * {
 .timeline {
   display: flex;
   flex-direction: column;
-  gap: 1.4mm;
+  gap: 0.8mm;
   position: relative;
 }
 .job {
@@ -469,7 +442,7 @@ main.content > * {
 .job .title {
   font-size: 7.75pt;
   color: var(--text-dim);
-  margin-top: 0.5mm;
+  margin-top: 0.3mm;
   font-weight: 400;
   letter-spacing: 0.02em;
 }
@@ -485,7 +458,7 @@ main.content > * {
   font-size: 6.5pt;
   color: var(--text-dim);
   line-height: 1.32;
-  margin: 0.4mm 0 0.4mm 0;
+  margin: 0.2mm 0 0.2mm 0;
   font-weight: 300;
 }
 .stack {

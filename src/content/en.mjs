@@ -14,7 +14,7 @@ export default {
   sLanguages: 'Languages',
   sCertifications: 'Certifications',
   sEducation: 'Education',
-  sInvolvement: 'Involvement',
+  sInvolvement: 'Additional experiences',
 
   languages: [
     { name: 'French',  level: 'NATIVE' },

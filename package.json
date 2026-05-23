@@ -1,10 +1,12 @@
 {
   "scripts": {
     "build": "node build.mjs",
+    "dev": "nodemon --watch src --watch styles --ext html,mjs,css --exec \"node build.mjs\"",
     "export": "node build.mjs && node export-pdf.mjs",
     "postinstall": "playwright install chromium"
   },
   "devDependencies": {
+    "nodemon": "^3.1.14",
     "playwright": "^1.60.0"
   }
 }

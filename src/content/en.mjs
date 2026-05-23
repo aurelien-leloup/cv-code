@@ -53,7 +53,7 @@ export default {
       contractType: 'Permanent',
       desc: "Back-end engineer on the MoneyFlow team of Plexus, Keylane's pension administration platform. We own every money movement in the system. Built the Norwegian trading flow end-to-end, enabling Plexus to expand into its third market after the Netherlands and Denmark. Also led the integration of KID numbers into the Norwegian premium-intake pipeline, the reference enabling reconciliation between incoming payments and member accounts. Working in a financial-grade quality environment: full auditability, strict transactional integrity, regulatory reporting.",
       stackBold: 'Java',
-      stackRest: '· GWT · Financial services · MS SQL',
+      stackRest: '· GWT · TestNG · Financial services · MS SQL',
     },
     {
       period: '2022 — 2024',

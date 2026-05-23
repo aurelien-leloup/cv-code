@@ -53,7 +53,7 @@ export default {
       contractType: 'CDI',
       desc: "Ingénieur back-end dans l'équipe MoneyFlow sur Plexus, la plateforme d'administration de retraites de Keylane. Notre équipe contrôle tous les mouvements financiers du système. Mise en place du flux monétaire norvégien de bout en bout, ouvrant à Plexus son troisième marché après les Pays-Bas et le Danemark. Intégration des numéros KID dans le cycle d'encaissement des primes norvégiennes, la référence permettant la réconciliation des paiements. Niveau de qualité financière : auditabilité complète et intégrité transactionnelle stricte.",
       stackBold: 'Java',
-      stackRest: '· GWT · Services financiers · MS SQL',
+      stackRest: '· GWT · TestNG · Services financiers · MS SQL',
     },
     {
       period: '2022 — 2024',

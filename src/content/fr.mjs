@@ -9,6 +9,8 @@ export default {
   summaryText: "de systèmes en production pour des startups, scale-ups et grands groupes — fintech, agritech, aviation, télécoms. Front-end, back-end, cloud. ",
   summaryBold2: 'Certifié AWS Solutions Architect.',
 
+  phone: '+33 6 59 57 24 32',
+
   sContact: 'Contact',
   sSkills: 'Compétences',
   sLanguages: 'Langues',

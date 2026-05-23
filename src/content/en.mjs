@@ -9,6 +9,8 @@ export default {
   summaryText: 'building production systems for startups, scale-ups, and global enterprises — across fintech, agritech, aviation, and telco. Front-end, back-end, cloud. ',
   summaryBold2: 'AWS Solutions Architect certified.',
 
+  phone: '+45 71 53 41 89',
+
   sContact: 'Contact',
   sSkills: 'Skills',
   sLanguages: 'Languages',

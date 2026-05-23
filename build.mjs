@@ -57,6 +57,7 @@ function buildTokens(c) {
     SUMMARY_TEXT:        e(c.summaryText),
     SUMMARY_BOLD2:       e(c.summaryBold2),
     STAT_LBL:            e(c.statLbl),
+    PHONE:               e(c.phone),
     S_CONTACT:           e(c.sContact),
     S_SKILLS:            e(c.sSkills),
     S_LANGUAGES:         e(c.sLanguages),

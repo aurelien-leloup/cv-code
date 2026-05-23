@@ -1,45 +1,24 @@
 # cv-code
 
-Aurélien Leloup's resume as code — bilingual (EN/FR), single layout.
+Aurélien Leloup's resume as code — bilingual EN/FR, exports to PDF via headless Chromium.
 
-## Structure
+**Download:**
+- [English PDF](https://github.com/aurelien-leloup/cv-code/releases/latest/download/CV-Aurelien-Leloup-EN.pdf)
+- [French PDF](https://github.com/aurelien-leloup/cv-code/releases/latest/download/CV-Aurelien-Leloup-FR.pdf)
 
-```
-src/
-  template.html        ← HTML layout with {{TOKEN}} placeholders
-  content/
-    en.mjs             ← English text
-    fr.mjs             ← French text
-styles/
-  cv.css               ← shared stylesheet
-avatar.png
-build.mjs              ← reads src/ → writes dist/
-export-pdf.mjs         ← opens dist/ in headless Chromium → export/*.pdf
-```
+PDFs are rebuilt and published automatically on every push to `main`.
 
-**Generated (gitignored):**
-```
-dist/                  ← CV-en.html, CV-fr.html
-export/                ← CV-Aurelien-Leloup-EN.pdf, …-FR.pdf
-```
-
-## Usage
+## Local usage
 
 ```bash
-npm install        # installs Playwright and downloads Chromium
-npm run build      # generates dist/CV-en.html and dist/CV-fr.html
-npm run export     # build + export both PDFs to export/
+npm install       # installs Playwright + Chromium
+npm run export    # builds HTML then exports both PDFs to export/
 ```
-
-## Public download URLs
-
-GitHub Actions rebuilds and re-publishes the PDFs on every push to `main`. These URLs are stable across all future releases:
-
-- **English:** https://github.com/aurelien-leloup/cv-code/releases/latest/download/CV-Aurelien-Leloup-EN.pdf
-- **French:** https://github.com/aurelien-leloup/cv-code/releases/latest/download/CV-Aurelien-Leloup-FR.pdf
 
 ## Editing
 
-- **Text / translations** → `src/content/en.mjs` or `src/content/fr.mjs`
-- **Layout / structure** → `src/template.html` (one edit, both languages updated)
-- **Styles** → `styles/cv.css`
+| What | Where |
+|------|-------|
+| Text / translations | `src/content/en.mjs` and `src/content/fr.mjs` |
+| Layout | `src/template.html` |
+| Styles | `styles/cv.css` |

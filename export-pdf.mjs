@@ -12,7 +12,9 @@ const files = [
   { html: 'dist/CV-fr.html', pdf: 'CV-Aurelien-Leloup-FR.pdf' },
 ];
 
-const browser = await chromium.launch();
+const browser = await chromium.launch({
+  args: ['--font-render-hinting=none', '--disable-font-subpixel-positioning'],
+});
 
 for (const { html, pdf } of files) {
   const htmlPath = resolve(__dirname, html);

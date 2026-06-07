@@ -2,7 +2,7 @@ export default {
   lang: 'fr',
   title: 'Aurélien Leloup — CV',
 
-  eyebrow: 'DISPONIBLE · COPENHAGUE',
+  eyebrow: 'COPENHAGUE · DANEMARK',
   roleStrong: 'Ingénieur Full-Stack & Cloud',
   roleSpan: '· Java · Angular · Certifié AWS',
   summaryBold1: '10 ans',

@@ -46,7 +46,14 @@ body {
 /* ────────────────── HERO ZONE (top, full-width) ────────────────── */
 .hero {
   grid-column: 1 / -1;
-  background: var(--card-bg);
+  background-color: var(--card-bg);
+  /* fine engineering grid, faded toward the right, with a soft gold glow top-right */
+  background-image:
+    radial-gradient(130% 160% at 100% -10%, rgba(241, 196, 15, 0.10), transparent 46%),
+    linear-gradient(105deg, transparent 45%, var(--card-bg) 92%),
+    linear-gradient(rgba(244, 241, 234, 0.17) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244, 241, 234, 0.17) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 6mm 6mm, 6mm 6mm;
   padding: 3mm 14mm 3mm 14mm;
   position: relative;
   display: grid;
@@ -118,7 +125,6 @@ body {
 }
 .name .accent {
   color: var(--accent);
-  font-style: italic;
   font-weight: 800;
 }
 .role {

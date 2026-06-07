@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Aurélien Leloup — LinkedIn Banner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    />
+    <style>
+      :root {
+        --bg-0: #161616;
+        --accent: #f1c40f;
+        --text: #f4f1ea;
+        --text-dim: #b8b3a8;
+        --text-muted: #7a766d;
+        --rule: rgba(244, 241, 234, 0.08);
+        --rule-strong: rgba(244, 241, 234, 0.16);
+
+        /* LinkedIn personal profile cover spec */
+        --banner-w: 1584px;
+        --banner-h: 396px;
+      }
+
+      * { box-sizing: border-box; }
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: #0e0e0e;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+        padding: 48px 24px;
+        background:
+          radial-gradient(circle at 50% 0%, rgba(241, 196, 15, 0.06), transparent 60%),
+          #0e0e0e;
+      }
+
+      /* ─────────────────────────  BANNER  ───────────────────────── */
+      .banner {
+        position: relative;
+        width: var(--banner-w);
+        height: var(--banner-h);
+        overflow: hidden;
+        background:
+          radial-gradient(60% 120% at 84% 52%, rgba(241, 196, 15, 0.10), transparent 55%),
+          radial-gradient(90% 140% at 4% 120%, rgba(241, 196, 15, 0.05), transparent 50%),
+          linear-gradient(135deg, #1f1f1f 0%, #181818 55%, #141414 100%);
+        color: var(--text);
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+        isolation: isolate;
+      }
+
+      /* fine engineering grid */
+      .banner::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(var(--rule) 1px, transparent 1px),
+          linear-gradient(90deg, var(--rule) 1px, transparent 1px);
+        background-size: 44px 44px;
+        mask-image: linear-gradient(105deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 55%, transparent 82%);
+        -webkit-mask-image: linear-gradient(105deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 55%, transparent 82%);
+        z-index: 0;
+      }
+
+      /* grain overlay */
+      .banner::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.04;
+        mix-blend-mode: overlay;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+        z-index: 6;
+      }
+
+      /* ── neon-wolf logo, right side signature mark ── */
+      .wolf {
+        position: absolute;
+        right: 96px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 380px;
+        width: auto;
+        z-index: 2;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      /* ───────────────  CONTENT  ─────────────── */
+      .inner {
+        position: absolute;
+        inset: 0;
+        z-index: 4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* left padding clears the bottom-left profile-photo overlap;
+           critical text stays inside the central safe zone */
+        padding: 0 470px 0 332px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.36em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin: 0 0 18px 0;
+      }
+      .eyebrow::before {
+        content: "";
+        width: 40px;
+        height: 2px;
+        background: var(--accent);
+      }
+
+      .name {
+        font-size: 70px;
+        font-weight: 800;
+        line-height: 0.92;
+        letter-spacing: -0.025em;
+        text-transform: uppercase;
+        margin: 0;
+        color: var(--text);
+        text-shadow: 0 2px 30px rgba(0, 0, 0, 0.45);
+      }
+      .name .accent { color: var(--accent); }
+
+      .role {
+        margin: 18px 0 0 0;
+        font-size: 21px;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        color: var(--text-dim);
+      }
+      .role strong { color: var(--text); font-weight: 600; }
+      .role .sep { color: var(--accent); margin: 0 10px; font-weight: 600; }
+
+      /* tech stack chips */
+      .stack {
+        margin-top: 26px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        font-family: "JetBrains Mono", monospace;
+      }
+      .chip {
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        color: var(--text-dim);
+        padding: 6px 14px;
+        border: 1px solid var(--rule-strong);
+        border-radius: 999px;
+        background: rgba(244, 241, 234, 0.02);
+        white-space: nowrap;
+      }
+      .chip.lead {
+        color: #1a1a1a;
+        background: var(--accent);
+        border-color: var(--accent);
+        font-weight: 600;
+      }
+
+      /* short accent rule, echoes the resume's diagonal mark */
+      .base-rule {
+        position: absolute;
+        left: 332px;
+        bottom: 40px;
+        width: 96px;
+        height: 3px;
+        background: var(--accent);
+        z-index: 4;
+      }
+
+      /* ──────────  safe-zone guide overlay (toggle)  ────────── */
+      .guides {
+        position: absolute;
+        inset: 0;
+        z-index: 9;
+        pointer-events: none;
+        display: none;
+      }
+      .guides.on { display: block; }
+      .safe {
+        position: absolute;
+        top: 88px; left: 117px;
+        width: 1350px; height: 220px;
+        border: 1px dashed rgba(46, 204, 113, 0.7);
+      }
+      .safe::after {
+        content: "SAFE ZONE · 1350 × 220";
+        position: absolute;
+        top: 4px; left: 8px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        color: rgba(46, 204, 113, 0.95);
+      }
+      .photo-zone {
+        position: absolute;
+        left: 60px; bottom: -64px;
+        width: 240px; height: 240px;
+        border-radius: 50%;
+        border: 1px dashed rgba(231, 76, 60, 0.85);
+      }
+      .photo-zone::after {
+        content: "PROFILE PHOTO";
+        position: absolute;
+        top: 18px; left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 10px;
+        letter-spacing: 0.1em;
+        color: rgba(231, 76, 60, 0.95);
+      }
+
+      /* ──────────  page chrome  ────────── */
+      .toolbar {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        font-family: "JetBrains Mono", monospace;
+        color: var(--text-dim);
+        font-size: 13px;
+      }
+      .toolbar .title { color: var(--text); font-weight: 600; letter-spacing: 0.04em; }
+      .toolbar .spec { color: var(--text-muted); }
+      .toolbar button {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        letter-spacing: 0.06em;
+        color: var(--text);
+        background: #1c1c1c;
+        border: 1px solid var(--rule-strong);
+        padding: 7px 14px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.15s ease;
+      }
+      .toolbar button:hover { border-color: var(--accent); color: var(--accent); }
+
+      .frame {
+        border: 1px solid rgba(244, 241, 234, 0.06);
+        line-height: 0;
+        border-radius: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <span class="title">AURÉLIEN LELOUP — LinkedIn cover</span>
+      <span class="spec">1584 × 396 px · 4:1</span>
+      <button id="toggleGuides" type="button">Toggle safe-zone guides</button>
+    </div>
+
+    <div class="frame">
+      <!-- ════════════════  THE BANNER (export this element)  ════════════════ -->
+      <div class="banner" id="banner">
+        <img class="wolf" src="img/neon-wolf-cutout.png" alt="Neon wolf logo" />
+
+        <div class="inner">
+          <p class="eyebrow">Copenhagen&nbsp;·&nbsp;Denmark</p>
+
+          <h1 class="name">Aurélien <span class="accent">Leloup</span></h1>
+
+          <p class="role">
+            <strong>Full-Stack Developer</strong>
+            <span class="sep">&amp;</span>
+            <strong>Cloud Engineer</strong>
+          </p>
+
+          <div class="stack">
+            <span class="chip lead">10 years of experience</span>
+            <span class="chip">Java</span>
+            <span class="chip">Angular</span>
+            <span class="chip">AWS Certified</span>
+          </div>
+        </div>
+
+        <div class="base-rule"></div>
+
+        <!-- safe-zone guides (hidden by default) -->
+        <div class="guides" id="guides">
+          <div class="safe"></div>
+          <div class="photo-zone"></div>
+        </div>
+      </div>
+      <!-- ══════════════════════════════════════════════════════════════════ -->
+    </div>
+
+    <script>
+      const btn = document.getElementById("toggleGuides");
+      const guides = document.getElementById("guides");
+      btn.addEventListener("click", () => guides.classList.toggle("on"));
+    </script>
+  </body>
+</html>

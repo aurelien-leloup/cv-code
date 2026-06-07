@@ -1,11 +1,12 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import en from './src/content/en.mjs';
-import fr from './src/content/fr.mjs';
+import en from '../src/content/en.mjs';
+import fr from '../src/content/fr.mjs';
 
 const __dir = dirname(fileURLToPath(import.meta.url));
-const read  = f => readFileSync(resolve(__dir, f), 'utf-8');
+const root  = resolve(__dir, '..');
+const read  = f => readFileSync(resolve(root, f), 'utf-8');
 const e     = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 const tMain    = read('src/template.html');
@@ -74,8 +75,9 @@ function buildTokens(c) {
   };
 }
 
-mkdirSync(resolve(__dir, 'dist'), { recursive: true });
-for (const [content, file] of [[en, 'dist/CV-en.html'], [fr, 'dist/CV-fr.html']]) {
-  writeFileSync(file, sub(tMain, buildTokens(content)), 'utf-8');
-  console.log('Built', file);
+mkdirSync(resolve(root, 'dist'), { recursive: true });
+for (const [content, name] of [[en, 'CV-en.html'], [fr, 'CV-fr.html']]) {
+  const out = resolve(root, 'dist', name);
+  writeFileSync(out, sub(tMain, buildTokens(content)), 'utf-8');
+  console.log('Built', out);
 }

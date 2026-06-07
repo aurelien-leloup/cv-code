@@ -4,7 +4,8 @@ import { fileURLToPath } from 'url';
 import { mkdirSync } from 'fs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const exportDir = resolve(__dirname, 'export');
+const root      = resolve(__dirname, '..');
+const exportDir = resolve(root, 'export');
 mkdirSync(exportDir, { recursive: true });
 
 const files = [
@@ -17,7 +18,7 @@ const browser = await chromium.launch({
 });
 
 for (const { html, pdf } of files) {
-  const htmlPath = resolve(__dirname, html);
+  const htmlPath = resolve(root, html);
   const pdfPath  = resolve(exportDir, pdf);
 
   const page = await browser.newPage();

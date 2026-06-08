@@ -93,7 +93,7 @@
         right: 96px;
         top: 50%;
         transform: translateY(-50%);
-        height: 380px;
+        height: 300px;
         width: auto;
         z-index: 2;
         user-select: none;
@@ -108,21 +108,22 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        /* left padding clears the bottom-left profile-photo overlap;
-           critical text stays inside the central safe zone */
-        padding: 0 470px 0 332px;
+        /* the role line + chips sit at the height of the bottom-left profile
+           photo, so they stay in this safe column; the eyebrow + name are high
+           enough to break further left into the free upper-left space */
+        padding: 0 400px 0 332px;
       }
 
       .eyebrow {
         display: inline-flex;
         align-items: center;
         gap: 14px;
-        font-size: 13px;
+        font-size: 14px;
         font-weight: 600;
         letter-spacing: 0.36em;
         text-transform: uppercase;
         color: var(--accent);
-        margin: 0 0 18px 0;
+        margin: 0 0 18px -58px;
       }
       .eyebrow::before {
         content: "";
@@ -132,12 +133,12 @@
       }
 
       .name {
-        font-size: 70px;
+        font-size: 82px;
         font-weight: 800;
         line-height: 0.92;
         letter-spacing: -0.025em;
         text-transform: uppercase;
-        margin: 0;
+        margin: 0 0 0 -58px;
         color: var(--text);
         text-shadow: 0 2px 30px rgba(0, 0, 0, 0.45);
       }
@@ -145,7 +146,7 @@
 
       .role {
         margin: 18px 0 0 0;
-        font-size: 21px;
+        font-size: 23px;
         font-weight: 400;
         letter-spacing: 0.01em;
         color: var(--text-dim);
@@ -163,11 +164,11 @@
         font-family: "JetBrains Mono", monospace;
       }
       .chip {
-        font-size: 13px;
+        font-size: 14px;
         font-weight: 500;
         letter-spacing: 0.02em;
         color: var(--text-dim);
-        padding: 6px 14px;
+        padding: 7px 15px;
         border: 1px solid var(--rule-strong);
         border-radius: 999px;
         background: rgba(244, 241, 234, 0.02);
@@ -217,8 +218,8 @@
       }
       .photo-zone {
         position: absolute;
-        left: 60px; bottom: -64px;
-        width: 240px; height: 240px;
+        left: 45px; bottom: -103px;
+        width: 308px; height: 308px;
         border-radius: 50%;
         border: 1px dashed rgba(231, 76, 60, 0.85);
       }

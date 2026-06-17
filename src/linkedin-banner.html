@@ -24,6 +24,15 @@
         --banner-h: 396px;
       }
 
+      /* ──  Open Graph format (1200 × 630, 1.91:1)  ──
+         Same content as the LinkedIn cover, recomposed for the squarer
+         social-card canvas: symmetric padding, larger wolf, no profile-photo
+         safe zone to dodge. Activated by ?format=og on the URL. */
+      body.og {
+        --banner-w: 1200px;
+        --banner-h: 630px;
+      }
+
       * { box-sizing: border-box; }
 
       html, body {
@@ -192,6 +201,26 @@
         z-index: 4;
       }
 
+      /* ───────────────  OG layout overrides  ─────────────── */
+      .og .inner {
+        /* no profile photo to dodge — symmetric padding, leave room for the
+           larger wolf on the right */
+        padding: 0 470px 0 96px;
+      }
+      .og .eyebrow { margin-left: 0; }
+      .og .name {
+        margin-left: 0;
+        font-size: 92px;
+      }
+      .og .role { font-size: 27px; }
+      .og .stack { margin-top: 32px; gap: 12px; }
+      .og .chip { font-size: 16px; padding: 8px 17px; }
+      .og .wolf {
+        right: 40px;
+        height: 460px;
+      }
+      .og .base-rule { left: 96px; bottom: 56px; }
+
       /* ──────────  safe-zone guide overlay (toggle)  ────────── */
       .guides {
         position: absolute;
@@ -310,6 +339,16 @@
     </div>
 
     <script>
+      // ?format=og recomposes the same content for the 1200×630 social card
+      const format = new URLSearchParams(location.search).get("format");
+      if (format === "og") {
+        document.body.classList.add("og");
+        document.querySelector(".toolbar .title").textContent =
+          "AURÉLIEN LELOUP — Open Graph image";
+        document.querySelector(".toolbar .spec").textContent =
+          "1200 × 630 px · 1.91:1";
+      }
+
       const btn = document.getElementById("toggleGuides");
       const guides = document.getElementById("guides");
       btn.addEventListener("click", () => guides.classList.toggle("on"));

@@ -6,8 +6,7 @@ export default {
   roleStrong: 'Full-Stack Developer & Cloud Engineer',
   roleSpan: '· Java · Angular · AWS Certified',
   summaryBold1: '10 years',
-  summaryText: 'building production systems for startups, scale-ups, and global enterprises — across fintech, agritech, aviation, and telco. Front-end, back-end, cloud. ',
-  summaryBold2: 'AWS Solutions Architect certified.',
+  summaryText: 'taking products from zero to production across agritech, aviation, telecom, and finance. Fast to get productive in an unfamiliar codebase, domain, or stack. Master\'s in Computer Science & Networking.',
 
   phone: '+45 71 53 41 89',
 
